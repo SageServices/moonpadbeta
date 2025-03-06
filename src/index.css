@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+:root {
+  --neon-red: #ff0044;
+  --neon-blue: #0099ff;
+  --space-black: #0a0a0a;
+  --moon-gray: #2a2a2a;
+}
+
+body {
+  background-color: var(--space-black);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.retro-container {
+  border: 2px solid var(--neon-red);
+  box-shadow: 0 0 10px var(--neon-red),
+              inset 0 0 5px var(--neon-red);
+  background: var(--moon-gray);
+}
+
+.pixel-border {
+  position: relative;
+  border: 2px solid var(--neon-red);
+}
+
+.pixel-border::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 1px solid var(--neon-red);
+  pointer-events: none;
+}
+
+.retro-button {
+  background: var(--space-black);
+  border: 2px solid var(--neon-red);
+  color: var(--neon-red);
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.retro-button:hover {
+  background: var(--neon-red);
+  color: var(--space-black);
+  box-shadow: 0 0 15px var(--neon-red);
+}
+
+.neon-text {
+  color: var(--neon-red);
+  text-shadow: 0 0 5px var(--neon-red),
+               0 0 10px var(--neon-red);
+}
+
+.space-gradient {
+  background: linear-gradient(180deg, var(--space-black) 0%, #1a1a1a 100%);
+}
